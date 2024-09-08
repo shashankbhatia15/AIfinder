@@ -79,7 +79,7 @@ def get_and_update_oldest_data(filename):
 # Usage
 if __name__ == "__main__":
     model = "mixtral-8x7b-32768"
-    os.environ["api_key"]= groq_key
+    os.environ["api_key"]= st.secrets["groq_key"]
 
     if not api_key:
         logging.error("GROQ API key not found in environment")

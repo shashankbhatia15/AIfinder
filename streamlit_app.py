@@ -5,8 +5,8 @@ from groq_chatbot import *
 from langchain_community.utilities import GoogleSerperAPIWrapper
 
 # Set API keys
-os.environ["SERPER_API_KEY"] = serper_key
-os.environ["api_key"]= groq_key
+os.environ["SERPER_API_KEY"] = st.secrets["serper_key"]
+os.environ["api_key"]=  st.secrets["groq_key"]
 
 # Create Streamlit app
 def main():
