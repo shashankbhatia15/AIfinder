@@ -15,7 +15,7 @@ def main():
     # Get user input
     query = st.text_input("Enter your query (e.g., 'HCOB Eurozone Manufacturing PMI august'):")
 
-    if st.button("Submit"):
+    if st.button("Submit") or st.session_state.get('enter_pressed'):
         # Perform search using Google Serper API
         search = GoogleSerperAPIWrapper(gl='in')
         results = search.results(query)
